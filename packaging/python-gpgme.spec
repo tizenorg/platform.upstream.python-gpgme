@@ -18,7 +18,7 @@ Version:        0.1
 Release:        0
 Summary:        A Python module for working with OpenPGP messages
 License:        LGPL-2.1+
-Group:          Platfrom Development/Python
+Group:          Platform Development/Python
 Url:            http://pypi.python.org/pypi/pygpgme
 Source:         pygpgme-%{version}.tar.bz2
 BuildRequires:  libgpgme-devel
