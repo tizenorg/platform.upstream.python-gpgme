@@ -1,0 +1,10 @@
+include Makefile
+include MANIFEST.in
+include test_all.py
+
+recursive-include gpgme *.py
+include gpgme/tests/keys/*.pub
+include gpgme/tests/keys/*.sec
+
+include src/*.c
+include src/*.h
