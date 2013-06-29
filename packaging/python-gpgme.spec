@@ -21,6 +21,7 @@ License:        LGPL-2.1+
 Group:          Platform Development/Python
 Url:            http://pypi.python.org/pypi/pygpgme
 Source:         pygpgme-%{version}.tar.bz2
+Source1001: 	python-gpgme.manifest
 BuildRequires:  libgpgme-devel
 BuildRequires:  python-devel
 
@@ -33,6 +34,7 @@ It is built on top of the GNU Privacy Guard and the GPGME library.
 
 %prep
 %setup -q -n pygpgme-%{version}
+cp %{SOURCE1001} .
 
 %build
 
@@ -43,6 +45,7 @@ rm -rf $RPM_BUILD_ROOT%{py_sitedir}/gpgme/tests/
 
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %doc README PKG-INFO
 %{py_sitedir}/*
